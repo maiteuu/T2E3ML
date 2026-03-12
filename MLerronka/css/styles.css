@@ -1,5 +1,5 @@
 /* =========================
-   RESET
+   1. RESET Y GENERAL
 ========================= */
 * {
   margin: 0;
@@ -7,35 +7,36 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   GENERAL
-========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
   color: #333;
 }
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
 /* =========================
-   HEADER
+   2. CABECERA (HEADER Y NAV)
 ========================= */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  justify-content: space-between; /* Separa el logo del menú */
   align-items: center;
   background-color: #d3dde0;
   padding: 15px 50px;
 }
 
-/* LOGO */
 header .logo img {
   width: 100px;
   height: auto;
-}
-
-/* NAV */
-nav {
-  justify-self: center;
 }
 
 nav ul {
@@ -45,45 +46,32 @@ nav ul {
 }
 
 nav ul li a {
-  text-decoration: none;
   font-size: 14px;
   font-weight: bold;
   color: #000;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-/* PRESENTACIÓN */
+/* =========================
+   3. HASIERA (index.html)
+========================= */
 .presentacion {
   display: flex;
   align-items: center;
   gap: 60px;
+  padding: 40px;
 }
-/* IMAGEN IZQUIERDA */
+
 .presentacion .imagen {
   width: 45%;
-  min-height: 300px;
   display: flex;
-  align-items: center;
   justify-content: center;
- 
 }
 
 .presentacion .imagen img {
   max-width: 100%;
   height: auto;
- 
-}
-.imagen{
-    width: auto;
-    margin-left: 50px;
-    margin-top: 50px;
-    border: #d3dde0;
-    
 }
 
-/* TEXTO DERECHA */
 .presentacion .texto {
   width: 55%;
 }
@@ -106,7 +94,7 @@ nav ul li a:hover {
   line-height: 1.6;
   margin-bottom: 15px;
 }
-/* BLOQUE DE IMÁGENES INFORMATIVAS */
+
 .info-imagenes {
   padding: 50px 20px;
   background-color: #f8f8f8;
@@ -116,15 +104,14 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   gap: 30px;
-  flex-wrap: wrap; /* para móviles */
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  border: #d3dde0;
 }
 
 .item-imagen {
   text-align: center;
-  flex: 1 1 250px; /* ancho mínimo de 250px por imagen */
+  flex: 1 1 250px;
 }
 
 .item-imagen img {
@@ -132,602 +119,238 @@ nav ul li a:hover {
   max-width: 250px;
   height: auto;
   border-radius: 10px;
-  border: 4px solid #d3dde0; /* borde azul */
+  border: 4px solid #d3dde0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s; /* transición hover */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .item-imagen:hover img {
-  transform: scale(1.1); /* hace zoom */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* sombra más intensa */
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
 .item-imagen p {
   font-size: 14px;
-  color: #333;
 }
 
 /* =========================
-   MAIN - EQUIPOS
-========================= */
-/* MAIN OCUPA TODO EL ESPACIO DISPONIBLE */
-main.equipos {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 equipos por fila */
-  gap: 20px; /* separación entre tarjetas */
-  padding: 40px 60px; /* espacio interno */
-
-}
-
-/* BLOQUE DE CADA TARJETA */
-.tarjeta-equipo {
-  background-color: #d3dde0;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.info{
-  margin: 5px;
-  line-height: 1.5;
-}
-/* ESCUDO */
-.escudo {
-  width: 90px;
-  height: 90px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.escudo img {
-  max-width: 95px;
-  height: 60px;
-}
-
-/* INFO DEL EQUIPO */
-.tarjeta-equipo{
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-/* TROFEOS */
-.trofeos {
-  margin-left: auto;
-  display: flex;
-  gap: 15px;
-}
-
-.trofeo {
-  text-align: center;
-  font-size: 14px;
-}
-
-.trofeo img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-}
-
-.trofeo span {
-  display: block;
-  font-weight: bold;
-}
-
-/* BOTÓN PLANTILLA */
-.plantilla {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: whitesmoke;
-  border-radius: 50px;
-  font-size: 14px;
-  text-align: center;
-  box-shadow: 5px 5px 5px lightgray;
-}
-
-.plantillabtn {
-  color: #1e6fd9;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.plantilla:hover{
- transform: scale(1.05);
-}
-
-.plantillabtn:hover {
- color: #0b3c8a;
- transform: scale(1.05);
- text-decoration: none;
-}
-/* Para todos los enlaces */
-a {
-  color: #333; /* Color del texto */
-  text-decoration: none; /* Quita el subrayado */
-  font-family: Arial, sans-serif;
-}
-
-/* Cuando el ratón pasa por encima */
-a:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-/* Cuando el enlace ya ha sido visitado */
-a:visited {
-  color: #333;
-}
-
-/* =========================
-   Tabla
+   4. TABLAS (sailkapena.php y taldea.php)
 ========================= */
 .contenedor-tabla {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 .titulo {
-background-color: #d3dde0;
-padding: 20px;
-margin-top: 20px;
-border-radius: 10px;
-text-align: center;
-font-size: 24px;
-color: #333;
-border-bottom: 2px solid lightgray;
-}
-        
-table {
-width: 100%;
-border-collapse: collapse;
-}
-       
-th {
-background-color: lightgray;
-padding: 15px;
-text-align: center;
-font-weight: bold;
-}
-        
-td {
-padding: 12px 15px;
-text-align: center;
-border-bottom: 1px solid #eee;
-}
-       
-tr:hover {
-background-color: #f9f9f9;
-}
-        
-/* PRIMER PUESTO - CHAMPIONS (AZUL) */
-.champions {
-background-color: rgba(173, 216, 230, 0.4); /* Azul claro */
-border-left: 4px solid #1e90ff; /* Azul más fuerte a la izquierda */
-}
-       
-/* SEGUNDO PUESTO - EUROPA LEAGUE (NARANJA) */
-.europa {
-background-color: rgba(255, 218, 185, 0.4); /* Naranja claro */
-border-left: 4px solid #ff8c00; /* Naranja a la izquierda */
-}
-        
-/* TERCER PUESTO - DESCENSO (ROJO) */
-.descenso {
-background-color: rgba(255, 192, 203, 0.4); /* Rosa rojizo claro */
-border-left: 4px solid #ff4444; /* Rojo a la izquierda */
-}
-        
-.posicion {
-font-weight: bold;
-width: 50px;
-}
-       
-.equipo {
-text-align: left;
-font-weight: bold;
-}
-        
-.puntos {
-font-weight: bold;
-}
-        
-/* Leyenda de colores */
-.leyenda {
-display: flex;
-justify-content: center;
-gap: 20px;
-margin-top: 20px;
-padding: 15px;
-background-color: #f0f0f0;
-border-radius: 5px;
-margin-bottom: 20px;
-}
-        
-.item-leyenda {
-display: flex;
-align-items: center;
-gap: 8px;
-}
-        
-.color-box {
-width: 20px;
-height: 20px;
-border-radius: 3px;
-}
-      
-.color-champions {
-background-color: rgba(173, 216, 230, 0.4);
-border-left: 4px solid #1e90ff;
-}
-        
-.color-europa {
-background-color: rgba(255, 218, 185, 0.4);
-border-left: 4px solid #ff8c00;
-}
-       
-.color-descenso {
-background-color: rgba(255, 192, 203, 0.4);
-border-left: 4px solid #ff4444;
-}
-
-/* =========================
-   FICHAJES
-========================= */
-
-h1 {
+  background-color: #d3dde0;
+  padding: 20px;
   text-align: center;
-  color: #2c3e50;
-  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid lightgray;
 }
 
-/* Contenedor de todos los fichajes */
-#listaFichajes {
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: lightgray;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.puntos {
+  font-weight: bold;
+}
+
+/* LEYENDA CLASIFICACIÓN */
+.leyenda {
   display: flex;
-  flex-direction: row; /* fila */
-  flex-wrap: wrap;     /* que se muevan a otra línea si no caben */
   justify-content: center;
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;  /* contenedor más grande */
-  margin: 0 auto;
+  padding: 15px;
+  background-color: #f0f0f0;
   margin-bottom: 20px;
-
 }
 
-/* efecto hover: zoom y sombra */
-.fichaje:hover {
-  transform: scale(1.01); /* aumenta el tamaño un 5% */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra opcional para efecto más “flotante” */
-}
-
-/* Estilo individual de cada ficha de fichaje */
-.fichaje {
-  background-color: #d3dde0;
-  padding: 20px;       /* más espacio interno */
-  border-radius: 5px;
-  text-align: center;
-  width: 250px;        /* ancho más grande */
+.item-leyenda {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 8px;
 }
 
-/* Contenedor de los escudos en fila */
-.fichaje .escudos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
 }
 
-/* Escudos más grandes */
-.fichaje img {
-  width: 80px;         /* ancho mayor */
-  height: 80px;        /* alto mayor */
-  object-fit: contain;
-}              
+.color-champions {
+  background-color: rgba(173, 216, 230, 0.4);
+  border-left: 4px solid #1e90ff;
+}
+
+.color-europa {
+  background-color: rgba(255, 218, 185, 0.4);
+  border-left: 4px solid #ff8c00;
+}
+
+.color-descenso {
+  background-color: rgba(255, 192, 203, 0.4);
+  border-left: 4px solid #ff4444;
+}
 
 /* =========================
-   FOOTER
+   5. FICHA DE EQUIPO (taldea.php)
+========================= */
+.ficha-equipo {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Imagen perfectamente centrada y adaptada */
+.ficha-equipo img {
+  width: 80px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: 120px;
+  margin-right: auto;
+  padding: 80px;
+}
+
+.ficha-equipo h1 {
+  color: #004d98;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+/* Botón de volver moderno */
+.btn-volver {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #004d98;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-volver:hover {
+  background-color: #003366;
+}
+
+/* =========================
+   6. LOGIN (loginform.php)
+========================= */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background-color: #004d98;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+form input[type="submit"]:hover {
+  background-color: #003366;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.itxi {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* =========================
+   7. FOOTER
 ========================= */
 footer {
   background-color: #d3dde0;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;
+  margin-top: 40px;
 }
-
-
-/* CONTACTO */
-footer .contacto p {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-
-/* REDES */
-
-
-.icon-circle {
-  display: inline-grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  color: #000;
-  border-radius: 50%;
-  text-decoration: none;
-  font-weight: 700;
-  border: 2px solid #000;
-  transition: background 180ms ease, border-color 180ms ease, transform 160ms ease;
-}
-
-
-.icon-circle img,
-.footer-icon {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  display: block;
-  transition: filter 180ms ease, transform 160ms ease, opacity 160ms ease;
-}
-
-
-.icon-circle:hover {
-  transform: translateY(-3px);
-  background: #000;
-  border-color: #fff;
-}
-
-
-.icon-circle:hover img{
-  filter: invert(1) grayscale(0.2) contrast(1.05);
-}
-
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
 
 .footer-info p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin: 0;
+  margin: 5px 0;
+  font-weight: bold;
 }
-
 
 .social-icons {
   display: flex;
   gap: 15px;
-  align-items: center;
 }
 
-/* =========================
-   JOKALARIAK
-========================= */
-/* Escudo único */
-.escudo-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
 }
 
-.escudo-container img {
-  width: 180px;      /* tamaño fijo */
-  height: 180px;     /* mismo alto */
-  object-fit: contain; /* muestra el escudo completo */
-  border: none;      /* sin borde */
-  border-radius: 0;  /* sin círculo */
-  box-shadow: none;  /* sin sombra (opcional) */
+.footer-icon:hover {
+  transform: scale(1.2);
 }
- 
-/* Sección por posición */
-.seccion-posicion {
-  margin-bottom: 40px;
-}
-
-.seccion-posicion h2 {
-  margin-bottom: 20px;
-  color: #1e6fd9;
-  border-bottom: 2px solid #1e6fd9;
-  padding-bottom: 5px;
-}
-
-/* Grid de jugadores */
-.jugadores-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 220px)); /* ancho fijo de todas las tarjetas */
-  gap: 30px;
-  justify-content: start; /* no estira tarjetas si hay pocos elementos */
-}
-
-/* Tarjeta jugador */
-.tarjeta-jugador {
-  background-color: #d3dde0;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-
-  /* Forzar mismo tamaño absoluto */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 220px;   /* mismo ancho */
-  height: 250px;  /* misma altura */
-  box-sizing: border-box;
-}
-
-.tarjeta-jugador:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.foto-jugador {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  flex-shrink: 0;
-}
-
-.tarjeta-jugador h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #1e6fd9;
-  flex-shrink: 0;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.tarjeta-jugador p {
-  font-size: 14px;
-  margin: 0;
-  color: #333;
-  flex-shrink: 0;
-}
-
-.numero-camiseta {
-  display: block;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #1e6fd9;
-  flex-shrink: 0;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-
-  /* HEADER */
-  header {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  nav ul {
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  /* PRESENTACIÓN */
-  .presentacion {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .presentacion .imagen,
-  .presentacion .texto {
-    width: 100%;
-  }
-
-  .presentacion .texto h1 {
-    font-size: 40px;
-    letter-spacing: 2px;
-  }
-
-  /* EQUIPOS */
-  main.equipos {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-  }
-
-  .tarjeta-equipo {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .trofeos {
-    margin-left: 0;
-    justify-content: center;
-  }
-
-  /* PLANTILLA JUGADORES */
-  .jugadores-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-
-  .tarjeta-jugador {
-    width: 150px;
-    height: 220px;
-    padding: 15px;
-  }
-
-  .foto-jugador {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-
-  .tarjeta-jugador h3 {
-    font-size: 14px;
-  }
-
-  .tarjeta-jugador p,
-  .numero-camiseta {
-    font-size: 12px;
-  }
-
-  .seccion-posicion h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .escudo-container img {
-    width: 140px;
-    height: 140px;
-  }
-
-  /* TABLA */
-  .contenedor-tabla {
-    overflow-x: auto;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  table {
-    min-width: 600px;
-    font-size: 12px;
-  }
-
-  th, td {
-    padding: 8px 10px;
-  }
-
-  .leyenda {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 12px;
-  
-  }}

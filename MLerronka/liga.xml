@@ -61,7 +61,8 @@
 
     <equipo>
       <id>6</id>
-      <nombre foto="../irudiak/moraza-removebg-preview.png">SD Moraza</nombre>
+      <nombre>SD Moraza</nombre>
+      <foto>moraza-removebg-preview.png</foto>
       <anioCreacion>1925</anioCreacion>
       <zelaia>Artxanda</zelaia>
     </equipo>

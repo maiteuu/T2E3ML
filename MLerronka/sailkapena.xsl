@@ -32,20 +32,6 @@
                             <td>
                                 <xsl:value-of select="position()" />
                             </td>
-
-                            <!--  <td>
-                                <xsl:variable name="id_equipo" select="equipo_id" />
-                                <xsl:variable name="escudo"
-                                    select="substring-after(../../equipos/equipo[id=$id_equipo]/nombre/@foto, '../')"  />
-
-                                <img src="{$escudo}" width="30"
-                                    style="vertical-align: middle; margin-right: 10px;" />
-
-                                <a href="taldea.php?id={$id_equipo}">
-                                    <xsl:value-of select="nombre" />
-                                </a>
-                            </td>-->
-
                             <td>
                                 <img src="irudiak/{foto}" width="30" alt="Armarria" />
                             </td>
