@@ -1,0 +1,90 @@
+<?php
+// 2. Cargamos el archivo XML
+$xml = new DOMDocument;
+$xml->load('liga.xml');
+
+// 3. Cargamos el archivo XSL
+$xsl = new DOMDocument;
+$xsl->load('sailkapena.xsl');
+
+// 4. Creamos el procesador XSLT de PHP
+$procesador = new XSLTProcessor;
+
+// 5. Le metemos nuestra plantilla XSL al procesador
+$procesador->importStyleSheet($xsl);
+
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<link rel="icon" type="img/jpg" href="irudiak/balon.ico">
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFF – Euskal Futbol Federazioa</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- CABECERA / MENÚ -->
+  <header>
+    <div class="logo">
+      <!-- LOGO -->
+      <img class="eff" src="irudiak/EFFLOGOA.png" alt="EFF Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HASIERA</a></li>
+        <li><a href="sailkapena.php">SAILKAPENA</a></li>
+        <li><a href="#">FITXAKETAK</a></li>
+        <li><a href="loginform.php">HASI SAIOA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+ 
+
+  <main>
+  <?php
+    // 6. Transformamos el XML usando el XSL y lo imprimimos directamente en el HTML
+    echo $procesador->transformToXML($xml);
+    ?>
+    
+  </main>
+
+   <!-- PIE DE PÁGINA -->
+  <footer>
+
+
+    <!-- DIRECCIÓN -->
+    <div class="footer-info ">
+      <p>Lehendakari Aguirre, 97</p>
+      <p>646 78 98 78</p>
+    </div>    
+    <div class="social-icons">
+
+
+          <a href="#" class="icon-circle" aria-label="Facebook" target="_blank" rel="noopener">
+            <img src="irudiak/facebook.png" alt="Facebook" class="footer-icon">
+          </a>
+          <a href="#" class="icon-circle" aria-label="X" target="_blank" rel="noopener">
+            <img src="irudiak/gorjeo.png" alt="X" class="footer-icon">
+          </a>
+          <a href="#" class="icon-circle" aria-label="YouTube" target="_blank" rel="noopener">
+            <img src="irudiak/youtube.png" alt="YouTube" class="footer-icon">
+          </a>
+          <a href="https://www.instagram.com/eff_fvf/reels/" class="icon-circle" aria-label="Instagram" target="_blank" rel="noopener">
+            <img src="irudiak/instagram.png" alt="Instagram" class="footer-icon">
+          </a>
+    </div>
+</footer>
+
+</body>
+</html>
