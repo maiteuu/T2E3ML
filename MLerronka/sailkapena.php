@@ -1,4 +1,5 @@
 <?php
+session_start();
 // 2. Cargamos el archivo XML
 $xml = new DOMDocument;
 $xml->load('liga.xml');
@@ -39,14 +40,20 @@ $procesador->importStyleSheet($xsl);
     </div>
 
     <nav>
-      <ul>
-        <li><a href="index.html">HASIERA</a></li>
-        <li><a href="sailkapena.php">SAILKAPENA</a></li>
-        <li><a href="fitxaketak.php">FITXAKETAK</a></li>
-        <li><a href="kontaktua.html">KONTAKTUA</a></li>
-        <li><a href="loginform.php">HASI SAIOA</a></li>
-      </ul>
-    </nav>
+            <ul>
+                <li><a href="index.php">HASIERA</a></li>
+                <li><a href="sailkapena.php">SAILKAPENA</a></li>
+                <li><a href="fitxaketak.php">FITXAKETAK</a></li>
+                <li><a href="kontaktua.php">KONTAKTUA</a></li>
+                
+                <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
+                    <li><span class="user-rol-badge">👤 <?php echo $_SESSION['usuario']; ?></span></li>
+                    <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
+                <?php else: ?>
+                    <li><a href="loginform.php">HASI SAIOA</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
   </header>
 
   <!-- CONTENIDO PRINCIPAL -->

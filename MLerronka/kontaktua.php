@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="eu">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontaktua – Euskal Futbol Federazioa</title>
   <link rel="icon" type="image/jpg" href="irudiak/balon.ico">
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
 <body>
 
@@ -13,13 +14,20 @@
     <div class="logo">
       <img class="eff" src="irudiak/EFFLOGOA.png" alt="EFF Logo">
     </div>
+    
     <nav>
       <ul>
         <li><a href="index.php">HASIERA</a></li>
         <li><a href="sailkapena.php">SAILKAPENA</a></li>
         <li><a href="fitxaketak.php">FITXAKETAK</a></li>
-        <li><a href="kontaktua.html">KONTAKTUA</a></li>
-        <li><a href="loginform.php">HASI SAIOA</a></li>
+        <li><a href="kontaktua.php">KONTAKTUA</a></li>
+        
+        <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
+            <li><span class="user-rol-badge">👤 <?php echo $_SESSION['usuario']; ?></span></li>
+            <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
+        <?php else: ?>
+            <li><a href="loginform.php">HASI SAIOA</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
   </header>
@@ -31,7 +39,7 @@
       
       <div class="map-column">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.1497854389345!2d-2.9042342881880714!3d43.25335747100359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4e54bbfbda13%3A0x78c4c666c23b6cfe!2sEFF-FVF%3A%20Euskadiko%20Futbol%20Federakundea%20%E2%80%93%20Federaci%C3%B3n%20Vasca%20de%20F%C3%BAtbol!5e1!3m2!1ses!2ses!4v1773388716633!5m2!1ses!2ses" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m" 
           width="100%" 
           height="100%" 
           style="border:0;" 
@@ -47,24 +55,16 @@
           
           <div class="email-item">
             <span class="icon-red" aria-hidden="true">
-              <img src="irudiak/email.png" alt="Email" width="24" height="24">
+              <img src="irudiak/email.png" alt="" width="20" height="16">
             </span>
-            <div class="email-text">
-              <strong>Zuzendaritza Posta Elektronikoa</strong><br>
-              zuzendaritza@euskadifutbol.eus
-            </div>
+            <div class="email-text"><strong>Zuzendaritza Posta Elektronikoa</strong><br>zuzendaritza@euskadifutbol.eus</div>
           </div>
-
           <div class="email-item">
             <span class="icon-red" aria-hidden="true">
-              <img src="irudiak/email.png" alt="Email" width="24" height="24">
+              <img src="irudiak/email.png" alt="" width="20" height="16">
             </span>
-            <div class="email-text">
-              <strong>Lehiaketen Posta Elektronikoa</strong><br>
-              competiciones@euskadifutbol.eus
-            </div>
+            <div class="email-text"><strong>Lehiaketen Posta Elektronikoa</strong><br>competiciones@euskadifutbol.eus</div>
           </div>
-          
         </section>
       </div>
 

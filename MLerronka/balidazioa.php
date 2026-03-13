@@ -6,12 +6,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_input = $_POST['usuario'];
     $pass_input = $_POST['contrasena'];
 
-    // Cargamos el archivo XML que contiene los usuarios
-    $xml = simplexml_load_file("users.xml");
+    // CORRECCIÓN 1: Cargamos el archivo correcto (liga.xml)
+    if (file_exists("liga.xml")) {
+        $xml = simplexml_load_file("liga.xml");
+    } else {
+        die("Error: No se encuentra el archivo liga.xml");
+    }
+    
     $login_success = false;
 
-    // Recorremos cada nodo <usuario> buscando una coincidencia
-    foreach ($xml->usuario as $user_node) {
+    // CORRECCIÓN 2: Buscamos dentro de la etiqueta <sistema>
+    foreach ($xml->sistema->usuario as $user_node) {
         $xml_user = (string)$user_node->usuario;
         $xml_pass = (string)$user_node->contrasena;
         $xml_rol  = (string)$user_node['rol'];
@@ -27,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($login_success) {
         // Si todo es correcto, entramos a la web
-        header("Location: index.html"); 
+        header("Location: index.php"); 
         exit();
     } else {
         // Si hay error, volvemos al login con el aviso de error activado
@@ -35,4 +40,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
-?>
+?>  

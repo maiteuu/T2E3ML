@@ -723,3 +723,28 @@ footer {
   min-height: 700px;
   border: none !important;
 }
+/* =========================================
+   12. ESTADO DE USUARIO (SESIÓN)
+========================================= */
+.user-rol-badge {
+  background-color: var(--bg-soft);
+  color: var(--eff-green);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--eff-green);
+  letter-spacing: 1px;
+}
+
+.btn-logout {
+  color: var(--eff-red) !important; /* Lo ponemos rojo para que destaque que es para salir */
+}
+
+.btn-logout::after {
+  background-color: var(--eff-red) !important;
+}
+
+.btn-logout:hover {
+  color: #a00d18 !important;
+}
