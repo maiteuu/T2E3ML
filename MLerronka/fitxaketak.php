@@ -1,24 +1,15 @@
 <?php
-// 1. Recoger el ID de la URL
-if (!isset($_GET['id']) || empty($_GET['id'])) {
-    die("Error: No has seleccionado ningún equipo.");
-}
-$id_equipo = $_GET['id'];
-
-// 2. Cargamos el archivo XML
+// 1. Cargamos el archivo XML principal
 $xml = new DOMDocument;
 $xml->load('liga.xml');
 
-// 3. Cargamos el archivo XSL
+// 2. Cargamos el archivo XSL de fichajes
 $xsl = new DOMDocument;
-$xsl->load('taldea.xsl');
+$xsl->load('fitxaketak.xsl');
 
-// 4. Creamos el procesador XSLT de PHP
+// 3. Creamos el procesador XSLT
 $procesador = new XSLTProcessor;
 $procesador->importStyleSheet($xsl);
-
-// 5. Le pasamos la ID del equipo desde PHP hacia el archivo XSLT
-$procesador->setParameter('', 'equipo_id', $id_equipo);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +17,7 @@ $procesador->setParameter('', 'equipo_id', $id_equipo);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taldea – Euskal Futbol Federazioa</title>
+  <title>Fitxaketak – Euskal Futbol Federazioa</title>
   <link rel="icon" type="image/jpg" href="irudiak/balon.ico">
   <link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
@@ -38,7 +29,7 @@ $procesador->setParameter('', 'equipo_id', $id_equipo);
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">HASIERA</a></li>
+        <<li><a href="index.html">HASIERA</a></li>
         <li><a href="sailkapena.php">SAILKAPENA</a></li>
         <li><a href="fitxaketak.php">FITXAKETAK</a></li>
         <li><a href="kontaktua.html">KONTAKTUA</a></li>
@@ -49,7 +40,7 @@ $procesador->setParameter('', 'equipo_id', $id_equipo);
 
   <main>
     <?php
-      // 6. Transformamos e imprimimos la ficha del equipo
+      // 4. Transformamos e imprimimos el contenido de las tarjetas
       echo $procesador->transformToXML($xml);
     ?>
   </main>

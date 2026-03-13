@@ -7,20 +7,27 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2" />
 </head>
 <body>
-    <header>
-        <img src="irudiak/logoa.png" alt="Logoa">
-        <br><br>
-        <nav>
-            <h1>Sartzea debekatuta. Egin logina jarraitzeko.</h1>
-        </nav>
-    </header>
+     <header>
+    <div class="logo">
+      <!-- LOGO -->
+      <img class="eff" src="irudiak/EFFLOGOA.png" alt="EFF Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HASIERA</a></li>
+        <li><a href="sailkapena.php">SAILKAPENA</a></li>
+        <li><a href="#">FITXAKETAK</a></li>
+        <li><a href="loginform.php">HASI SAIOA</a></li>
+      </ul>
+    </nav>
+  </header>
     <main>
         <section>
             <article>
-                <h2>Erabiltzaileen login-a</h2>
                 
                 <?php if(isset($_GET['itxi'])): ?>
                     <p class="itxi">Saioa itxi da</p>
@@ -46,7 +53,29 @@ session_start();
     </main>
 
     <footer>
-        <h3>© Markel egindako ariketa</h3>
-    </footer>
+
+
+    <!-- DIRECCIÓN -->
+    <div class="footer-info ">
+      <p>Lehendakari Aguirre, 97</p>
+      <p>646 78 98 78</p>
+    </div>    
+    <div class="social-icons">
+
+
+          <a href="#" class="icon-circle" aria-label="Facebook" target="_blank" rel="noopener">
+            <img src="irudiak/facebook.png" alt="Facebook" class="footer-icon">
+          </a>
+          <a href="#" class="icon-circle" aria-label="X" target="_blank" rel="noopener">
+            <img src="irudiak/gorjeo.png" alt="X" class="footer-icon">
+          </a>
+          <a href="#" class="icon-circle" aria-label="YouTube" target="_blank" rel="noopener">
+            <img src="irudiak/youtube.png" alt="YouTube" class="footer-icon">
+          </a>
+          <a href="https://www.instagram.com/eff_fvf/reels/" class="icon-circle" aria-label="Instagram" target="_blank" rel="noopener">
+            <img src="irudiak/instagram.png" alt="Instagram" class="footer-icon">
+          </a>
+    </div>
+</footer>
 </body>
 </html>

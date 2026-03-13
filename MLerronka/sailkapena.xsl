@@ -25,46 +25,53 @@
                 </thead>
                 <tbody>
                     <xsl:for-each select="liga_global/clasificacion_actual/fila">
-
                         <xsl:sort select="puntos" data-type="number" order="descending" />
 
                         <tr>
+                            <xsl:attribute name="class">
+                                <xsl:choose>
+                                    <xsl:when test="position() = 1">fila-champions</xsl:when>
+                                    <xsl:when test="position() = 2">fila-europa</xsl:when>
+                                    <xsl:when test="position() = last()">fila-descenso</xsl:when>
+                                </xsl:choose>
+                            </xsl:attribute>
+
                             <td>
                                 <xsl:value-of select="position()" />
                             </td>
+
                             <td>
-                                <img src="irudiak/{foto}" width="30" alt="Armarria" />
+                                <xsl:variable name="id_equipo" select="equipo_id" />
+                                <xsl:variable name="escudo" select="/liga_global/equipos/equipo[id=$id_equipo]/foto" />
+                                <img>
+                                    <xsl:attribute name="src">
+                                        <xsl:text>irudiak/</xsl:text>
+                                        <xsl:value-of select="$escudo" />
+                                    </xsl:attribute>
+                                    <xsl:attribute name="width">30</xsl:attribute>
+                                    <xsl:attribute name="alt">Escudo</xsl:attribute>
+                                </img>
                             </td>
+
                             <td>
-                                <a href="taldea.php?id={equipo_id}">
-                                    <xsl:value-of select="nombre" />
+                                <a>
+                                    <xsl:attribute name="href">
+                                        <xsl:text>taldea.php?id=</xsl:text>
+                                        <xsl:value-of select="equipo_id" />
+                                    </xsl:attribute>
+                                    <b><xsl:value-of select="nombre" /></b>
                                 </a>
                             </td>
-                            <td>
-                                <xsl:value-of select="pj" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="pg" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="pe" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="pp" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="gf" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="gc" />
-                            </td>
-                            <td>
-                                <xsl:value-of select="dg" />
-                            </td>
+
+                            <td><xsl:value-of select="pj" /></td>
+                            <td><xsl:value-of select="pg" /></td>
+                            <td><xsl:value-of select="pe" /></td>
+                            <td><xsl:value-of select="pp" /></td>
+                            <td><xsl:value-of select="gf" /></td>
+                            <td><xsl:value-of select="gc" /></td>
+                            <td><xsl:value-of select="dg" /></td>
                             <td class="puntos">
-                                <b>
-                                    <xsl:value-of select="puntos" />
-                                </b>
+                                <b><xsl:value-of select="puntos" /></b>
                             </td>
                         </tr>
                     </xsl:for-each>

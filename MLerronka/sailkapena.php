@@ -26,7 +26,7 @@ $procesador->importStyleSheet($xsl);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EFF – Euskal Futbol Federazioa</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2" />
 </head>
 
 <body>
@@ -42,7 +42,8 @@ $procesador->importStyleSheet($xsl);
       <ul>
         <li><a href="index.html">HASIERA</a></li>
         <li><a href="sailkapena.php">SAILKAPENA</a></li>
-        <li><a href="#">FITXAKETAK</a></li>
+        <li><a href="fitxaketak.php">FITXAKETAK</a></li>
+        <li><a href="kontaktua.html">KONTAKTUA</a></li>
         <li><a href="loginform.php">HASI SAIOA</a></li>
       </ul>
     </nav>

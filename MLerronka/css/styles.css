@@ -1,6 +1,30 @@
-/* =========================
-   1. RESET Y GENERAL
-========================= */
+/* =========================================
+   1. IMPORTACIÓN DE FUENTES Y VARIABLES
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+:root {
+  /* COLORES OFICIALES DEL LOGO (EFF) */
+  --eff-green: #00893d;
+  --eff-green-dark: #00662d;
+  --eff-red: #d11221;
+  
+  /* COLORES DE ESTRUCTURA */
+  --bg-body: #ffffff;
+  --bg-soft: #f8faf9;
+  --text-main: #374151;
+  --text-dark: #111827;
+  
+  /* MEJORAS VISUALES */
+  --border-light: #e5e7eb;
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 15px 30px rgba(0, 137, 61, 0.12);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* =========================================
+   2. RESET Y GENERAL
+========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,34 +32,69 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #333;
+  color: var(--text-main);
   text-decoration: none;
+  transition: var(--transition);
 }
 
-a:hover {
-  color: black;
-  text-decoration: underline;
+.titulo-seccion {
+  background-color: var(--eff-green);
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 4px solid var(--eff-red);
+  margin-bottom: 40px;
 }
 
-/* =========================
-   2. CABECERA (HEADER Y NAV)
-========================= */
+/* =========================================
+   3. CABECERA (HEADER Y NAV)
+========================================= */
 header {
   display: flex;
-  justify-content: space-between; /* Separa el logo del menú */
+  justify-content: center;
   align-items: center;
-  background-color: #d3dde0;
+  background-color: #ffffff;
   padding: 15px 50px;
+  position: relative;
+  min-height: 90px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  border-bottom: 3px solid var(--eff-green);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--eff-red);
+}
+
+header .logo {
+  position: absolute;
+  left: 50px;
+  transition: var(--transition);
+}
+
+header .logo:hover {
+  transform: scale(1.05);
 }
 
 header .logo img {
-  width: 100px;
+  width: 95px;
   height: auto;
 }
 
@@ -47,152 +106,160 @@ nav ul {
 
 nav ul li a {
   font-size: 14px;
-  font-weight: bold;
-  color: #000;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--eff-red);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 80%;
 }
 
 nav ul li a:hover {
-  color: green;
+  color: var(--eff-green);
 }
 
-@media (max-width: 992px) {
-  header {
-    padding: 15px 24px;
-  }
-
-  nav ul {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 760px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-
-  nav ul li a {
-    display: inline-block;
-    padding: 6px 4px;
-    font-size: 13px;
-  }
-}
-
-/* =========================
-   3. HASIERA (index.html)
-========================= */
+/* =========================================
+   4. HASIERA (index.html)
+========================================= */
 .presentacion {
   display: flex;
   align-items: center;
-  gap: 60px;
-  padding: 40px;
+  gap: 50px;
+  padding: 70px 40px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-.presentacion .imagen {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-}
+.presentacion .imagen { width: 50%; }
 
 .presentacion .imagen img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-hover);
+  transition: var(--transition);
+}
+
+.presentacion .imagen img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .presentacion .texto {
-  width: 55%;
+  width: 50%;
+  padding-left: 20px;
 }
 
 .presentacion .texto h1 {
-  font-size: 64px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  font-size: 58px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .presentacion .texto h2 {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--eff-red);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 700;
 }
 
 .presentacion .texto p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-main);
+  line-height: 1.8;
 }
 
 .info-imagenes {
-  padding: 50px 20px;
-  background-color: #f8f8f8;
+  padding: 70px 20px;
+  background-color: var(--bg-soft);
 }
 
 .contenedor-imagenes {
   display: flex;
-  justify-content: space-around;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .item-imagen {
+  background: var(--bg-body);
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
   text-align: center;
-  flex: 1 1 250px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.item-imagen:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--eff-green);
 }
 
 .item-imagen img {
   width: 100%;
-  max-width: 250px;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
-  border: 4px solid #d3dde0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.item-imagen:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
 }
 
 .item-imagen p {
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-dark);
+  padding: 0 10px;
 }
 
-/* =========================
-   4. TABLAS (sailkapena.php y taldea.php)
-========================= */
+/* =========================================
+   5. TABLAS (sailkapena.php)
+========================================= */
 .contenedor-tabla {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 10px;
+  max-width: 950px;
+  margin: 60px auto;
+  background-color: var(--bg-body);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border-light);
 }
 
 .titulo {
-  background-color: #d3dde0;
-  padding: 20px;
+  background-color: var(--eff-green);
+  color: #ffffff;
+  padding: 22px;
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid lightgray;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 4px solid var(--eff-red);
 }
 
 table {
@@ -201,264 +268,458 @@ table {
 }
 
 th {
-  background-color: lightgray;
-  padding: 15px;
+  background-color: var(--bg-soft);
+  color: var(--text-dark);
+  padding: 18px 15px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-light);
 }
 
 td {
-  padding: 12px 15px;
+  padding: 16px 15px;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+  font-weight: 600;
 }
 
-tr:hover {
-  background-color: #f9f9f9;
+tbody tr:nth-child(even) td { background-color: #fcfdfc; }
+
+td a {
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  margin-left: 15px;
+  font-weight: 700;
 }
+
+td a:hover {
+  color: var(--eff-green);
+  transform: translateX(5px);
+}
+
+tr:hover td { background-color: #f2f7f4 !important; }
 
 .puntos {
-  font-weight: bold;
+  font-size: 18px;
+  color: var(--eff-green);
+  font-weight: 800;
 }
 
-/* LEYENDA CLASIFICACIÓN */
+.fila-champions td { background-color: rgba(30, 144, 255, 0.05) !important; }
+.fila-champions td:first-child { border-left: 5px solid #1e90ff; color: #1e90ff; font-weight: 800; }
+
+.fila-europa td { background-color: rgba(255, 140, 0, 0.05) !important; }
+.fila-europa td:first-child { border-left: 5px solid #ff8c00; color: #ff8c00; font-weight: 800;}
+
+.fila-descenso td { background-color: rgba(255, 68, 68, 0.05) !important; }
+.fila-descenso td:first-child { border-left: 5px solid #ff4444; color: #ff4444; font-weight: 800;}
+
 .leyenda {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  background-color: #f0f0f0;
-  margin-bottom: 20px;
+  gap: 35px;
+  padding: 22px;
+  background-color: var(--bg-soft);
+  font-size: 13px;
+  font-weight: 700;
+  border-top: 1px solid var(--border-light);
 }
 
-.item-leyenda {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+.item-leyenda { display: flex; align-items: center; gap: 12px; }
+.color-box { width: 16px; height: 16px; border-radius: 4px; }
+.color-champions { background-color: #1e90ff; }
+.color-europa { background-color: #ff8c00; }
+.color-descenso { background-color: #ff4444; }
 
-.color-box {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-}
-
-.color-champions {
-  background-color: rgba(173, 216, 230, 0.4);
-  border-left: 4px solid #1e90ff;
-}
-
-.color-europa {
-  background-color: rgba(255, 218, 185, 0.4);
-  border-left: 4px solid #ff8c00;
-}
-
-.color-descenso {
-  background-color: rgba(255, 192, 203, 0.4);
-  border-left: 4px solid #ff4444;
-}
-
-/* =========================
-   5. FICHA DE EQUIPO (taldea.php)
-========================= */
+/* =========================================
+   6. FICHA DE EQUIPO (taldea.php)
+========================================= */
 .ficha-equipo {
   text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #ddd;
+  background: radial-gradient(circle at top, #ffffff, var(--bg-soft));
+  padding: 50px 20px;
+  border-bottom: 1px solid var(--border-light);
 }
 
-/* Imagen perfectamente centrada y adaptada */
 .ficha-equipo img {
-  width: 80px;
-  margin-bottom: 15px;
-  display: block;
-  margin-left: 120px;
-  margin-right: auto;
-  padding: 80px;
+  width: 140px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.ficha-equipo img:hover { transform: scale(1.15); }
 
 .ficha-equipo h1 {
-  color: #004d98;
-  margin-bottom: 5px;
-  font-size: 28px;
+  color: var(--eff-green);
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
-/* Botón de volver moderno */
+.ficha-equipo p {
+  color: var(--text-main);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
 .btn-volver {
   display: inline-block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #004d98;
-  color: white !important;
-  text-decoration: none !important;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 30px;
+  margin: 35px auto;
+  padding: 14px 35px;
+  background-color: var(--eff-green);
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 137, 61, 0.2);
 }
 
 .btn-volver:hover {
-  background-color: #003366;
+  background-color: var(--eff-green-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 137, 61, 0.3);
 }
 
-/* =========================
-   6. LOGIN (loginform.php)
-========================= */
-
+/* =========================================
+   7. LOGIN (loginform.php)
+========================================= */
 form {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
+  max-width: 420px;
+  margin: 70px auto;
+  padding: 45px 40px;
+  background: var(--bg-body);
+  border-radius: 16px;
+  box-shadow: var(--shadow-hover);
+  border-top: 6px solid var(--eff-green);
 }
 
 form label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
 }
 
 form input[type="text"],
 form input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 14px 15px;
+  margin-bottom: 25px;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--eff-green);
+  background-color: #fbfcfd;
 }
 
 form input[type="submit"] {
-  background-color: #004d98;
+  background-color: var(--eff-green);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 16px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 800;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
 }
 
 form input[type="submit"]:hover {
-  background-color: #003366;
+  background-color: var(--eff-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.error {
-  color: red;
-  font-weight: bold;
+.error, .itxi {
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 700;
   text-align: center;
-  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
-.itxi {
-  color: green;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
-}
+.error { color: #d32f2f; background-color: #ffebee; border: 1px solid #ffcdd2; }
+.itxi { color: #2e7d32; background-color: #e8f5e9; border: 1px solid #c8e6c9; }
 
-/* =========================
-   7. KONTAKTUA
-========================= */
-
-.contact-wrapper{
-  max-width: 1200px;
-  margin: 28px auto;
-  padding: 0 18px;
-  display: grid;
-  grid-template-columns: 1fr 440px; 
-  gap: 40px;
-  align-items: start;
-}
-
-.contact-wrapper .map-column iframe{
-  width: 100%;
-  height: 520px; 
-  border: 0;
-  display: block;
-  border-radius: 6px;
-}
-
-.info-column{
-  background: #D3DDE0; 
-  color: #ffffff; 
-  padding: 34px 34px;
-  border-radius: 6px;
-  box-shadow: none;
-}
-
-.info-column .section-title{
-  font-size: 30px;
-  margin: 0 0 18px 0;
-  color: black;
-  text-align: left;
-}
-
-.contact-block{ margin-bottom: 22px; }
-
-.contact-heading{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 20px;
-  margin: 0 0 8px 0;
-  color: black;
-}
-
-.contact-block p{ margin: 6px 0; color: black; line-height: 1.45; }
-
-@media (max-width: 992px){
-  .contact-wrapper{ grid-template-columns: 1fr 360px; gap: 28px; }
-  .contact-wrapper .map-column iframe{ height: 460px; }
-}
-
-@media (max-width: 760px){
-  .contact-wrapper{ grid-template-columns: 1fr; }
-  .info-column{ padding: 22px; }
-  .contact-wrapper .map-column iframe{ height: 340px; }
-}
-
-.email-list{ display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
-.email-item{ display: flex; gap: 18px; align-items: center; }
-.icon-red{ width: 48px; height: 48px; background: green; border-radius: 50%; display: inline-grid; place-items: center; flex: 0 0 48px; overflow: hidden; }
-.icon-red img{ display: block; width: 20px; height: 20px; object-fit: contain; }
-.email-text{ color: black; }
-.email-text strong{ display: block; margin-bottom: 4px; color: black; }
-
-/* =========================
+/* =========================================
    8. FOOTER
-========================= */
+========================================= */
 footer {
-  background-color: #d3dde0;
-  padding: 20px 50px;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 40px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 70px;
+  border-top: 4px solid var(--eff-red);
 }
 
 .footer-info p {
   margin: 5px 0;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
+  color: #e5e7eb;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .footer-icon {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s;
+  width: 38px;
+  height: 38px;
+  transition: var(--transition);
+  filter: brightness(0) invert(1);
 }
 
 .footer-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.15) translateY(-3px);
+  filter: brightness(0) invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+}
+
+/* =========================================
+   9. FICHAJES (fitxaketak.php)
+========================================= */
+.contenedor-fichajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.tarjeta-fichaje {
+  background-color: var(--bg-body);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.tarjeta-fichaje:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--eff-green);
+}
+
+.fichaje-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--bg-soft);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.fichaje-cabecera h3 {
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.fichaje-cabecera .precio {
+  background-color: var(--eff-red);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(209, 18, 33, 0.2);
+}
+
+.fichaje-trayectoria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equipo-fichaje {
+  text-align: center;
+  width: 40%;
+}
+
+.equipo-fichaje img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.equipo-fichaje p {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.flecha-fichaje {
+  color: var(--eff-green);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* =========================================
+   10. KONTAKTUA (kontaktua.html)
+========================================= */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.map-column {
+  flex: 1 1 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--border-light);
+  min-height: 400px;
+}
+
+.map-column iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.info-column {
+  flex: 1 1 400px;
+  background-color: var(--bg-body);
+  padding: 45px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  border-top: 6px solid var(--eff-green);
+  transition: var(--transition);
+}
+
+.info-column:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-section h2 {
+  color: var(--eff-green);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--bg-soft);
+  padding-bottom: 15px;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.email-item:hover {
+  background-color: #ffffff;
+  border-color: var(--eff-red);
+  transform: translateX(5px);
+}
+
+.icon-red {
+  background-color: #fff1f2;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(209, 18, 33, 0.15);
+}
+
+.icon-red img {
+  filter: invert(16%) sepia(87%) saturate(6011%) hue-rotate(348deg) brightness(87%) contrast(97%);
+  width: 24px;
+  height: auto;
+}
+
+.email-text {
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.email-text strong {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* =========================================
+   11. ENCUESTA DE GOOGLE FORMS (kontaktua.html)
+========================================= */
+.survey-section {
+  background-color: var(--bg-body);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  border-top: 6px solid var(--eff-red); 
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+.survey-section h2 {
+  color: var(--eff-red);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid var(--bg-soft);
+  padding-bottom: 15px;
+}
+
+.google-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fcfcfc;
+  border: 1px solid var(--border-light);
+}
+
+.google-form-wrapper iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none !important;
 }
