@@ -19,20 +19,49 @@ session_start();
         </div>
 
         <nav>
-            <ul>
-                <li><a href="index.php">HASIERA</a></li>
-                <li><a href="sailkapena.php">SAILKAPENA</a></li>
-                <li><a href="fitxaketak.php">FITXAKETAK</a></li>
-                <li><a href="kontaktua.php">KONTAKTUA</a></li>
-                
-                <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
-                    <li><span class="user-rol-badge">👤 <?php echo $_SESSION['usuario']; ?></span></li>
-                    <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
-                <?php else: ?>
-                    <li><a href="loginform.php">HASI SAIOA</a></li>
-                <?php endif; ?>
+    <ul>
+        <li><a href="index.php">HASIERA</a></li>
+        
+        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'arbitro'): ?>
+            <li class="dropdown">
+                <a href="sailkapena.php">SAILKAPENA ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="emaitza_form.php">Emaitza berria gehitu</a></li>
+                </ul>
+            </li>
+        <?php else: ?>
+            <li><a href="sailkapena.php">SAILKAPENA</a></li>
+        <?php endif; ?>
+
+        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin'): ?>
+            <li class="dropdown">
+                <a href="fitxaketak.php">FITXAKETAK ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="fitxaketa_form.php">Fitxaketa berria gehitu</a></li>
+                </ul>
+            </li>
+        <?php else: ?>
+            <li><a href="fitxaketak.php">FITXAKETAK</a></li>
+        <?php endif; ?>
+
+        <li><a href="kontaktua.php">KONTAKTUA</a></li>
+
+        <li class="dropdown">
+            <a href="#">DENBORALDIA: <?php echo isset($texto_temp) ? $texto_temp : '24/25'; ?> ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="?temp=2425">2024-2025</a></li>
+                <li><a href="?temp=2526">2025-2026</a></li>
             </ul>
-        </nav>
+        </li>
+
+        <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
+            <li><span class="user-rol-badge"> <?php echo $_SESSION['usuario']; ?></span></li>
+            <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
+        <?php else: ?>
+            <li><a href="loginform.php">HASI SAIOA</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
     </header>
     <main>
         <section>

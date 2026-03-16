@@ -748,3 +748,194 @@ footer {
 .btn-logout:hover {
   color: #a00d18 !important;
 }
+/* =========================================
+   MENÚ DESPLEGABLE (FORZADO)
+========================================= */
+nav ul li.dropdown {
+  position: relative !important;
+}
+
+nav ul li.dropdown .dropdown-menu {
+  display: none !important; /* Lo esconde por defecto */
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background-color: #ffffff !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999 !important; /* Lo pone por encima de todo */
+  flex-direction: column !important;
+}
+
+/* Al pasar el ratón por encima del LI, mostramos el UL */
+nav ul li.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+/* Diseño de los botoncitos de las temporadas */
+nav ul li.dropdown .dropdown-menu li {
+  list-style: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+nav ul li.dropdown .dropdown-menu li a {
+  color: #374151 !important;
+  padding: 12px 16px !important;
+  text-decoration: none !important;
+  display: block !important;
+  text-align: left !important;
+  font-weight: 500 !important;
+}
+
+nav ul li.dropdown .dropdown-menu li a:hover {
+  background-color: #f8faf9 !important;
+  color: #00893d !important; /* Verde de la EFF */
+}
+/* Contenedor del desplegable */
+nav ul li.dropdown .dropdown-menu {
+  display: none !important; 
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background-color: #ffffff !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  padding: 5px 0 !important; /* Un poco de aire arriba y abajo del bloque entero */
+  margin: 0 !important;
+  z-index: 9999 !important; 
+  flex-direction: column !important;
+  gap: 0 !important; /* Asegura que no haya huecos entre los botones */
+}
+
+/* Diseño de los enlaces de las temporadas */
+nav ul li.dropdown .dropdown-menu li a {
+  color: #374151 !important;
+  padding: 8px 16px !important; /* <--- AQUÍ ESTÁ LA CLAVE: Hemos bajado de 12px a 8px */
+  text-decoration: none !important;
+  display: block !important;
+  text-align: left !important;
+  font-weight: 500 !important;
+}
+/* --- ESTILOS PARA LOS FORMULARIOS DE ADMIN/ÁRBITRO --- */
+.admin-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #1b5e20; /* Verde de la EFF */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #123d15;
+}
+
+.btn-cancel {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+}
+div{
+  text-align: center;
+}
+/* --- ESTILOS DEL FORMULARIO DE ADMIN --- */
+.formulario-caja {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario-caja h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.formulario-caja label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.formulario-caja select, 
+.formulario-caja input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-guardar {
+    background-color: #1b5e20; /* Verde de la EFF */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    background-color: #123d15;
+}
+
+.btn-cancelar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    text-decoration: none;
+}
+
+.btn-cancelar:hover {
+    text-decoration: underline;
+}

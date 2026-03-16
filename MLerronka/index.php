@@ -1,36 +1,67 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="eu">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasiera - Euskal Futbol Federazioa</title>
-    <link rel="icon" type="image/jpg" href="irudiak/balon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=6" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasiera - Euskal Futbol Federazioa</title>
+  <link rel="icon" type="image/jpg" href="irudiak/balon.ico">
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">
-            <img class="eff" src="irudiak/EFFLOGOA.png" alt="EFF Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">HASIERA</a></li>
-                <li><a href="sailkapena.php">SAILKAPENA</a></li>
-                <li><a href="fitxaketak.php">FITXAKETAK</a></li>
-                <li><a href="kontaktua.php">KONTAKTUA</a></li>
-                
-                <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
-                    <li><span class="user-rol-badge">👤 <?php echo $_SESSION['usuario']; ?></span></li>
-                    <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
-                <?php else: ?>
-                    <li><a href="loginform.php">HASI SAIOA</a></li>
-                <?php endif; ?>
+  <header>
+    <div class="logo">
+      <img class="eff" src="irudiak/EFFLOGOA.png" alt="EFF Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.php">HASIERA</a></li>
+
+        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'arbitro'): ?>
+          <li class="dropdown">
+            <a href="sailkapena.php">SAILKAPENA ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="emaitza_form.php">Emaitza berria gehitu</a></li>
             </ul>
-        </nav>
-    </header>
- <!-- CONTENIDO PRINCIPAL -->
+          </li>
+        <?php else: ?>
+          <li><a href="sailkapena.php">SAILKAPENA</a></li>
+        <?php endif; ?>
+
+        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin'): ?>
+          <li class="dropdown">
+            <a href="fitxaketak.php">FITXAKETAK ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="fitxaketak_egin.php">Fitxaketa berria gehitu</a></li>
+            </ul>
+          </li>
+        <?php else: ?>
+          <li><a href="fitxaketak.php">FITXAKETAK</a></li>
+        <?php endif; ?>
+
+        <li><a href="kontaktua.php">KONTAKTUA</a></li>
+
+        <li class="dropdown">
+          <a href="#">DENBORALDIA: <?php echo isset($texto_temp) ? $texto_temp : '24/25'; ?> ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="?temp=2425">2024-2025</a></li>
+            <li><a href="?temp=2526">2025-2026</a></li>
+          </ul>
+        </li>
+
+        <?php if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])): ?>
+          <li><span class="user-rol-badge"> <?php echo $_SESSION['usuario']; ?></span></li>
+          <li><a href="logout.php" class="btn-logout">ITXI SAIOA</a></li>
+        <?php else: ?>
+          <li><a href="loginform.php">HASI SAIOA</a></li>
+        <?php endif; ?>
+      </ul>
+    </nav>
+  </header>
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
 
     <section class="presentacion">
@@ -41,9 +72,12 @@
       </div>
 
       <!-- TEXTO DERECHA -->
+
       <div class="texto">
         <h1>EFF</h1>
         <h2>EUSKAL FUTBOL FEDERAZIO</h2>
+
+
 
         <p>
           Euskal Herriko Futbol Ligak bere lehen denboraldia arrakastaz amaitu du, zaleei maila handiko futbola eta
@@ -64,44 +98,46 @@
 
     </section>
     <section class="info-imagenes">
-  <div class="contenedor-imagenes">
-    <div class="item-imagen">
-      <img src="irudiak/morazataldea.png" alt="Imagen 1">
-      <p>SD Moraza, aurreko denboraldian Champions League trofeoa irabazi zuten.</p>
-    </div>
-    <div class="item-imagen">
-      <img src="irudiak/umoreonataldea.png" alt="Imagen 2">
-      <p>SD Umore ona, aurreko denboraldian Kopa irabazi zuten</p>
-    </div>
-    <div class="item-imagen">
-      <img src="irudiak/basconiataldea.png" alt="Imagen 3">
-      <p>CD Basconia, aurreko denboraldian liga irabazi zuten</p>
-    </div>
-  </div>
-</section>
+      <div class="contenedor-imagenes">
+        <div class="item-imagen">
+          <img src="irudiak/morazataldea.png" alt="Imagen 1">
+          <p>SD Moraza, aurreko denboraldian Champions League trofeoa irabazi zuten.</p>
+        </div>
+        <div class="item-imagen">
+          <img src="irudiak/umoreonataldea.png" alt="Imagen 2">
+          <p>SD Umore ona, aurreko denboraldian Kopa irabazi zuten</p>
+        </div>
+        <div class="item-imagen">
+          <img src="irudiak/basconiataldea.png" alt="Imagen 3">
+          <p>CD Basconia, aurreko denboraldian liga irabazi zuten</p>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-    <footer>
-        <div class="footer-info">
-            <p>Lehendakari Aguirre, 97</p>
-            <p>646 78 98 78</p>
-        </div>
-        <div class="social-icons">
-            <a href="#" class="icon-circle" aria-label="Facebook" target="_blank" rel="noopener">
-                <img src="irudiak/facebook.png" alt="Facebook" class="footer-icon">
-            </a>
-            <a href="#" class="icon-circle" aria-label="X" target="_blank" rel="noopener">
-                <img src="irudiak/gorjeo.png" alt="X" class="footer-icon">
-            </a>
-            <a href="#" class="icon-circle" aria-label="YouTube" target="_blank" rel="noopener">
-                <img src="irudiak/youtube.png" alt="YouTube" class="footer-icon">
-            </a>
-            <a href="https://www.instagram.com/eff_fvf/reels/" class="icon-circle" aria-label="Instagram" target="_blank" rel="noopener">
-                <img src="irudiak/instagram.png" alt="Instagram" class="footer-icon">
-            </a>
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-info">
+      <p>Lehendakari Aguirre, 97</p>
+      <p>646 78 98 78</p>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="icon-circle" aria-label="Facebook" target="_blank" rel="noopener">
+        <img src="irudiak/facebook.png" alt="Facebook" class="footer-icon">
+      </a>
+      <a href="#" class="icon-circle" aria-label="X" target="_blank" rel="noopener">
+        <img src="irudiak/gorjeo.png" alt="X" class="footer-icon">
+      </a>
+      <a href="#" class="icon-circle" aria-label="YouTube" target="_blank" rel="noopener">
+        <img src="irudiak/youtube.png" alt="YouTube" class="footer-icon">
+      </a>
+      <a href="https://www.instagram.com/eff_fvf/reels/" class="icon-circle" aria-label="Instagram" target="_blank"
+        rel="noopener">
+        <img src="irudiak/instagram.png" alt="Instagram" class="footer-icon">
+      </a>
+    </div>
+  </footer>
 
 </body>
+
 </html>

@@ -43,7 +43,7 @@
                 </tbody>
             </table>
 
-            <div style="text-align: center;">
+            <div>
                 <a href="sailkapena.php" class="btn-volver">Itzuli sailkapenera</a>
             </div>
         </div>
