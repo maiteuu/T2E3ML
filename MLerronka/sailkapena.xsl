@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:output method="html" encoding="UTF-8" indent="yes" />
+    <xsl:output method="html" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
 
     <xsl:template match="/">
         <div class="contenedor-tabla">
-            <div class="titulo">Futbol Txapelketaren sailkapena</div>
+            <h2 class="titulo">Futbol Txapelketaren Sailkapena</h2>
 
             <table>
                 <thead>
@@ -37,7 +37,7 @@
                             </xsl:attribute>
 
                             <td>
-                                <xsl:value-of select="position()" />
+                                <b><xsl:value-of select="position()" /></b>
                             </td>
 
                             <td>
@@ -70,6 +70,7 @@
                             <td><xsl:value-of select="gf" /></td>
                             <td><xsl:value-of select="gc" /></td>
                             <td><xsl:value-of select="dg" /></td>
+                            
                             <td class="puntos">
                                 <b><xsl:value-of select="puntos" /></b>
                             </td>
@@ -89,7 +90,7 @@
                 </div>
                 <div class="item-leyenda">
                     <div class="color-box color-descenso"></div>
-                    <span>6º - Descenso</span>
+                    <span>Azkena - Descenso</span>
                 </div>
             </div>
         </div>

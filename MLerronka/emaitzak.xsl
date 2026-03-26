@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="html" encoding="UTF-8" indent="yes" />
+    <xsl:output method="html" encoding="UTF-8" />
     <xsl:param name="usuario" />
 
     <xsl:template match="/liga_global">
-        <div class="titulo-seccion">Azken Fitxaketak</div>
-        <div class="contenedor-fichajes">
-            <xsl:for-each select="fichajes/fichaje">
-                <div class="tarjeta-fichaje">
-                    <div class="fichaje-cabecera">
-                        <h3><xsl:value-of select="jugador" /></h3>
-                        <span class="precio"><xsl:value-of select="precio" /> €</span>
-                    </div>
-                    <div class="fichaje-trayectoria">
-                        <div class="equipo-fichaje">
-                            <xsl:variable name="img_origen" select="substring-after(origen/@escudo, '../')" />
-                            <img src="{$img_origen}" alt="Escudo Origen" />
-                            <p><xsl:value-of select="origen" /></p>
+        <div class="lista-partidos">
+            <xsl:for-each select="partidos/partido">
+                
+                <xsl:variable name="nombre_local" select="local" />
+                <xsl:variable name="nombre_visitante" select="visitante" />
+                
+                <xsl:variable name="foto_local" select="/liga_global/equipos/equipo[nombre=$nombre_local]/foto" />
+                <xsl:variable name="foto_visitante" select="/liga_global/equipos/equipo[nombre=$nombre_visitante]/foto" />
+
+                <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; padding: 20px;">
+                    <div class="marcador-fila" style="margin-bottom: 0; box-shadow: none; padding: 0;">
+                        <div class="equipo local">
+                            <span class="nombre-equipo"><xsl:value-of select="local" /></span>
+                            <img src="irudiak/{$foto_local}" alt="{local}" class="escudo-resultado" />
                         </div>
-                        <div class="flecha-fichaje"><span>&#10142;</span></div>
-                        <div class="equipo-fichaje">
-                            <xsl:variable name="img_destino" select="substring-after(destino/@escudo, '../')" />
-                            <img src="{$img_destino}" alt="Escudo Destino" />
-                            <p><xsl:value-of select="destino" /></p>
+                        <div class="resultado-caja">
+                            <span class="goles"><xsl:value-of select="goles_local" /></span>
+                            <span class="guion">-</span>
+                            <span class="goles"><xsl:value-of select="goles_visitante" /></span>
+                        </div>
+                        <div class="equipo visitante">
+                            <img src="irudiak/{$foto_visitante}" alt="{visitante}" class="escudo-resultado" />
+                            <span class="nombre-equipo"><xsl:value-of select="visitante" /></span>
                         </div>
                     </div>
+
                     <div class="seccion-comentarios">
                         <h4>Iruzkinak</h4>
                         <xsl:choose>
@@ -42,11 +47,13 @@
                                 </div>
                             </xsl:otherwise>
                         </xsl:choose>
+
                         <xsl:choose>
                             <xsl:when test="$usuario != ''">
-                                <form method="POST" action="fitxaketak.php" class="form-comentario">
-                                    <input type="hidden" name="jugador" value="{jugador}" />
-                                    <input type="text" name="iruzkina" class="input-comentario" placeholder="Zer iruditzen zaizu fitxaketa hau?" required="required" />
+                                <form method="POST" action="emaitzak.php" class="form-comentario">
+                                    <input type="hidden" name="local_obj" value="{local}" />
+                                    <input type="hidden" name="visitante_obj" value="{visitante}" />
+                                    <input type="text" name="iruzkina" class="input-comentario" placeholder="Zer iruditzen zaizu partidua?" required="required" />
                                     <button type="submit" class="btn-comentario">Bidali</button>
                                 </form>
                             </xsl:when>

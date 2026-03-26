@@ -60,166 +60,166 @@
   </equipos>
   <jugadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="jugadores.xsd">
     <jugadorLista>
-      <jugador nombre="Héctor Martín" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Iker Arrieta" posicion="Portero" equipo="1"/>
-      <jugador nombre="Gorka Mendibe" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Asier Gorostiza" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Unai Arrate" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Markel Etxegoien" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Pablo Landaburu" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Aitor Bereziartua" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Jon Egurrola" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Eneko Arraiza" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Xabier Sorozabal" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Mikel Irazusta" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Gaizka Olañeta" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Aritz Zalbide" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Jon Ander Irusta" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Iñaki Erdocia" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Gorka Aizkorbe" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Xabi Mendiondo" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Asier Altzaga" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Unai Beistegi" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Jon Elorriaga" posicion="Centrocampista" equipo="1"/>
-      <jugador nombre="Pablo Egibar" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Aitor Zuloaga" posicion="Delantero" equipo="1"/>
-      <jugador nombre="Markel Orue" posicion="Defensa" equipo="1"/>
-      <jugador nombre="Iker Goiko" posicion="Portero" equipo="1"/>
+      <jugador nombre="Héctor Martín" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Iker Arrieta" posicion="Portero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Gorka Mendibe" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Asier Gorostiza" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Unai Arrate" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Markel Etxegoien" posicion="Defensa" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Pablo Landaburu" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Aitor Bereziartua" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Jon Egurrola" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Eneko Arraiza" posicion="Defensa" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Xabier Sorozabal" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Mikel Irazusta" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Gaizka Olañeta" posicion="Defensa" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Aritz Zalbide" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Jon Ander Irusta" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Iñaki Erdocia" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Gorka Aizkorbe" posicion="Defensa" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Xabi Mendiondo" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Asier Altzaga" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Unai Beistegi" posicion="Defensa" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Jon Elorriaga" posicion="Centrocampista" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Pablo Egibar" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Aitor Zuloaga" posicion="Delantero" equipo="1" foto="jugador.png"/>
+      <jugador nombre="Markel Orue" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Iker Goiko" posicion="Portero" equipo="1" foto="jugador.png"/>
     </jugadorLista>
     <jugadorLista>
-      <jugador nombre="Iñigo Esteban" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Jon Aramayo" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Asier Antxia" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Unai Orbea" posicion="Portero" equipo="2"/>
-      <jugador nombre="Markel Lete" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Gorka Basagoiti" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Aritz Gorrotxategi" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Pablo Azkune" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Iker Lejardi" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Mikel Etxegoien" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Eneko Telleria" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Xabi Goenaga" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Aitor Zamalloa" posicion="Portero" equipo="2"/>
-      <jugador nombre="Jon Ander Arrautza" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Gorka Irazabal" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Asier Zallo" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Markel Gondra" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Iñaki Urrutia" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Aritz Argaña" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Unai Iriarte" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Pablo Mintegi" posicion="Portero" equipo="2"/>
-      <jugador nombre="Xabier Aizpuru" posicion="Centrocampista" equipo="2"/>
-      <jugador nombre="Jon Salazar" posicion="Defensa" equipo="2"/>
-      <jugador nombre="Eñaut Odriozola" posicion="Delantero" equipo="2"/>
-      <jugador nombre="Asier Odriozola" posicion="Delantero" equipo="2"/>
+      <jugador nombre="Iñigo Esteban" posicion="Delantero" equipo="6" foto="iñigo.png"/>
+      <jugador nombre="Jon Aramayo" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Asier Antxia" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Unai Orbea" posicion="Portero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Markel Lete" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Gorka Basagoiti" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Aritz Gorrotxategi" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Pablo Azkune" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Iker Lejardi" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Mikel Etxegoien" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Eneko Telleria" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Xabi Goenaga" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Aitor Zamalloa" posicion="Portero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Jon Ander Arrautza" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Gorka Irazabal" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Asier Zallo" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Markel Gondra" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Iñaki Urrutia" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Aritz Argaña" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Unai Iriarte" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Pablo Mintegi" posicion="Portero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Xabier Aizpuru" posicion="Centrocampista" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Jon Salazar" posicion="Defensa" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Eñaut Odriozola" posicion="Delantero" equipo="2" foto="jugador.png"/>
+      <jugador nombre="Asier Odriozola" posicion="Delantero" equipo="2" foto="jugador.png"/>
     </jugadorLista>
     <jugadorLista>
-      <jugador nombre="Alejandro Murillo" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Unai Arriaga" posicion="Portero" equipo="3"/>
-      <jugador nombre="Gorka Zubicoa" posicion="Defensa" equipo="3"/>
-      <jugador nombre="Asier Mendiguren" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Mikel Aramburu" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Aritz Etxaniz" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Eneko Alday" posicion="Defensa" equipo="3"/>
-      <jugador nombre="Pablo Arteaga" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Iker Zugasti" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Jon Manterola" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Gaizka Larramendi" posicion="Defensa" equipo="3"/>
-      <jugador nombre="Xabi Olaskoaga" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Markel Urbieta" posicion="Portero" equipo="3"/>
-      <jugador nombre="Aitor Aseguinolaza" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Unai Aristorena" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Mikel Etxegoien" posicion="Defensa" equipo="3"/>
-      <jugador nombre="Gorka Barrenechea" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Alejandro Murillo" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Iker Zaldibar" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Asier Guezuraga" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Markel Sarriegui" posicion="Defensa" equipo="3"/>
-      <jugador nombre="Aritz Minondo" posicion="Portero" equipo="3"/>
-      <jugador nombre="Pablo Urquiaga" posicion="Centrocampista" equipo="3"/>
-      <jugador nombre="Xabi Isuskiza" posicion="Delantero" equipo="3"/>
-      <jugador nombre="Eneko Gorka" posicion="Delantero" equipo="3"/>
+      <jugador nombre="Alejandro Murillo" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Unai Arriaga" posicion="Portero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Gorka Zubicoa" posicion="Defensa" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Asier Mendiguren" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Mikel Aramburu" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Aritz Etxaniz" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Eneko Alday" posicion="Defensa" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Pablo Arteaga" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Iker Zugasti" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Jon Manterola" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Gaizka Larramendi" posicion="Defensa" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Xabi Olaskoaga" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Markel Urbieta" posicion="Portero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Aitor Aseguinolaza" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Unai Aristorena" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Mikel Etxegoien" posicion="Defensa" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Gorka Barrenechea" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Alejandro Murillo" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Iker Zaldibar" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Asier Guezuraga" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Markel Sarriegui" posicion="Defensa" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Aritz Minondo" posicion="Portero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Pablo Urquiaga" posicion="Centrocampista" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Xabi Isuskiza" posicion="Delantero" equipo="3" foto="jugador.png"/>
+      <jugador nombre="Eneko Gorka" posicion="Delantero" equipo="3" foto="jugador.png"/>
     </jugadorLista>
     <jugadorLista>
-      <jugador nombre="Eder Bilbao" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Iker Zurita" posicion="Defensa" equipo="4"/>
-      <jugador nombre="Aitor Garro" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Unai Zorrozua" posicion="Portero" equipo="4"/>
-      <jugador nombre="Jon Aranguiz" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Pablo Kortazar" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Asier Gorroño" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Gorka Artea" posicion="Defensa" equipo="4"/>
-      <jugador nombre="Xabi Bustinza" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Markel Elexpe" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Aritz Oñate" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Eneko Arrien" posicion="Defensa" equipo="4"/>
-      <jugador nombre="Mikel Arrillaga" posicion="Portero" equipo="4"/>
-      <jugador nombre="Iñaki Antuñano" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Asier Zabalgoita" posicion="Defensa" equipo="4"/>
-      <jugador nombre="Unai Altzaga" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Pablo Urresti" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Gorka Zunzunegui" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Aitor Ormazabal" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Jon Azurza" posicion="Defensa" equipo="4"/>
-      <jugador nombre="Markel Gartzia" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Xabi Zendoia" posicion="Portero" equipo="4"/>
-      <jugador nombre="Iker Berriozabal" posicion="Delantero" equipo="4"/>
-      <jugador nombre="Aritz Mendioroz" posicion="Centrocampista" equipo="4"/>
-      <jugador nombre="Mikel Azkarraga" posicion="Defensa" equipo="4"/>
+      <jugador nombre="Eder Bilbao" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Iker Zurita" posicion="Defensa" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Aitor Garro" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Unai Zorrozua" posicion="Portero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Jon Aranguiz" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Pablo Kortazar" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Asier Gorroño" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Gorka Artea" posicion="Defensa" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Xabi Bustinza" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Markel Elexpe" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Aritz Oñate" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Eneko Arrien" posicion="Defensa" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Mikel Arrillaga" posicion="Portero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Iñaki Antuñano" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Asier Zabalgoita" posicion="Defensa" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Unai Altzaga" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Pablo Urresti" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Gorka Zunzunegui" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Aitor Ormazabal" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Jon Azurza" posicion="Defensa" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Markel Gartzia" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Xabi Zendoia" posicion="Portero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Iker Berriozabal" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Aritz Mendioroz" posicion="Centrocampista" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Mikel Azkarraga" posicion="Defensa" equipo="4" foto="jugador.png"/>
     </jugadorLista>
     <jugadorLista>
-      <jugador nombre="Iker Albistegi" posicion="Portero" equipo="5"/>
-      <jugador nombre="Gorka Hernando" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Asier Aldama" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Unai Ibarguren" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Markel Azpeitia" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Pablo Legorburu" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Aitor Eizagirre" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Jon Azurmendi" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Mikel Uriondo" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Xabi Arrayago" posicion="Portero" equipo="5"/>
-      <jugador nombre="Eneko Urrutia" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Gorka Arambarri" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Asier Altzibar" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Unai Etxanobe" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Markel Erguin" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Aritz Isasi" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Pablo Orbegozo" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Iñaki Erro" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Gorka Aseguinolaza" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Asier Kortabarria" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Jon Agirre" posicion="Defensa" equipo="5"/>
-      <jugador nombre="Mikel Zugasti" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Xabi Zulaika" posicion="Centrocampista" equipo="5"/>
-      <jugador nombre="Unai Arraiza" posicion="Delantero" equipo="5"/>
-      <jugador nombre="Pablo Urrunaga" posicion="Defensa" equipo="5"/>
+      <jugador nombre="Iker Albistegi" posicion="Portero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Gorka Hernando" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Asier Aldama" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Unai Ibarguren" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Markel Azpeitia" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Pablo Legorburu" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Aitor Eizagirre" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Jon Azurmendi" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Mikel Uriondo" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Xabi Arrayago" posicion="Portero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Eneko Urrutia" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Gorka Arambarri" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Asier Altzibar" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Unai Etxanobe" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Markel Erguin" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Aritz Isasi" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Pablo Orbegozo" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Iñaki Erro" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Gorka Aseguinolaza" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Asier Kortabarria" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Jon Agirre" posicion="Defensa" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Mikel Zugasti" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Xabi Zulaika" posicion="Centrocampista" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Unai Arraiza" posicion="Delantero" equipo="5" foto="jugador.png"/>
+      <jugador nombre="Pablo Urrunaga" posicion="Defensa" equipo="5" foto="jugador.png"/>
     </jugadorLista>
     <jugadorLista>
-      <jugador nombre="Urtzi Estevez" posicion="Portero" equipo="6"/>
-      <jugador nombre="Iker Aizkorreta" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Gorka Arandia" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Unai Etxebeste" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Asier Aramendi" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Markel Garagarza" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Jon Arrien" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Pablo Ugalde" posicion="Portero" equipo="6"/>
-      <jugador nombre="Aitor Arsuaga" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Xabi Unzueta" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Eneko Gorostola" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Gorka Zorrozua" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Iñaki Murua" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Asier Iriondo" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Unai Goia" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Markel Zubiri" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Jon Arizti" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Pablo Elizalde" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Aritz Zubimendi" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Eneko Sarasola" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Gorka Urrezti" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Xabi Olarte" posicion="Delantero" equipo="6"/>
-      <jugador nombre="Mikel Gaztañaga" posicion="Defensa" equipo="6"/>
-      <jugador nombre="Iker Altolagirre" posicion="Centrocampista" equipo="6"/>
-      <jugador nombre="Unai Oregi" posicion="Delantero" equipo="6"/>
+      <jugador nombre="Urtzi Estevez" posicion="Portero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Iker Aizkorreta" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Gorka Arandia" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Unai Etxebeste" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Asier Aramendi" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Markel Garagarza" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Jon Arrien" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Pablo Ugalde" posicion="Portero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Aitor Arsuaga" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Xabi Unzueta" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Eneko Gorostola" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Gorka Zorrozua" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Iñaki Murua" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Asier Iriondo" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Unai Goia" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Markel Zubiri" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Jon Arizti" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Pablo Elizalde" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Aritz Zubimendi" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Eneko Sarasola" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Gorka Urrezti" posicion="Delantero" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Xabi Olarte" posicion="Delantero" equipo="4" foto="jugador.png"/>
+      <jugador nombre="Mikel Gaztañaga" posicion="Defensa" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Iker Altolagirre" posicion="Centrocampista" equipo="6" foto="jugador.png"/>
+      <jugador nombre="Unai Oregi" posicion="Delantero" equipo="6" foto="jugador.png"/>
     </jugadorLista>
   </jugadores>
   <fichajes>
@@ -228,6 +228,9 @@
       <origen escudo="../irudiak/ariz.png">SD Ariz</origen>
       <destino escudo="../irudiak/moraza-removebg-preview.png">SD Moraza</destino>
       <precio>150000</precio>
+      <iruzkinak>
+        <iruzkina erabiltzailea="erabiltzaile">Gran fichaje!!!!!!</iruzkina>
+      </iruzkinak>
     </fichaje>
     <fichaje>
       <jugador>Samuel Ortiz</jugador>
@@ -259,85 +262,40 @@
       <destino escudo="../irudiak/basconia.png">CD Baskonia</destino>
       <precio>0,01</precio>
     </fichaje>
+    <fichaje>
+      <jugador>Xabi Olarte</jugador>
+      <origen escudo="../irudiak/moraza-removebg-preview.png">SD Moraza</origen>
+      <destino escudo="../irudiak/merced.png">La Merced</destino>
+      <precio>50000</precio>
+    </fichaje>
+    <fichaje>
+      <jugador>Markel Orue</jugador>
+      <origen escudo="../irudiak/ariz.png">SD Ariz</origen>
+      <destino escudo="../irudiak/umore ona_resized.png">Umore Ona</destino>
+      <precio>10000</precio>
+    </fichaje>
   </fichajes>
-  <clasificacion_actual>
-    <fila>
-      <equipo_id>6</equipo_id>
-      <nombre>SD Moraza</nombre>
-      <foto>moraza-removebg-preview.png</foto>
-      <pj>10</pj>
-      <pg>6</pg>
-      <pe>4</pe>
-      <pp>0</pp>
-      <gf>21</gf>
-      <gc>8</gc>
-      <dg>+13</dg>
-      <puntos>22</puntos>
-    </fila>
-    <fila>
-      <equipo_id>5</equipo_id>
-      <nombre>Umore Ona</nombre>
-      <foto>umore ona_resized.png</foto>
-      <pj>10</pj>
-      <pg>6</pg>
-      <pe>3</pe>
-      <pp>1</pp>
-      <gf>19</gf>
-      <gc>11</gc>
-      <dg>+8</dg>
-      <puntos>21</puntos>
-    </fila>
-    <fila>
-      <equipo_id>2</equipo_id>
-      <nombre>CD Baskonia</nombre>
-      <foto>basconia.png</foto>
-      <pj>10</pj>
-      <pg>4</pg>
-      <pe>3</pe>
-      <pp>3</pp>
-      <gf>14</gf>
-      <gc>12</gc>
-      <dg>+2</dg>
-      <puntos>15</puntos>
-    </fila>
-    <fila>
-      <equipo_id>1</equipo_id>
-      <nombre>SD Ariz</nombre>
-      <foto>ariz.png</foto>
-      <pj>10</pj>
-      <pg>3</pg>
-      <pe>4</pe>
-      <pp>3</pp>
-      <gf>12</gf>
-      <gc>13</gc>
-      <dg>-1</dg>
-      <puntos>13</puntos>
-    </fila>
-    <fila>
-      <equipo_id>3</equipo_id>
-      <nombre>Santutxu FC</nombre>
-      <foto>santutxu.png</foto>
-      <pj>10</pj>
-      <pg>2</pg>
-      <pe>4</pe>
-      <pp>4</pp>
-      <gf>11</gf>
-      <gc>16</gc>
-      <dg>-5</dg>
-      <puntos>10</puntos>
-    </fila>
-    <fila>
-      <equipo_id>4</equipo_id>
-      <nombre>La Merced</nombre>
-      <foto>merced.png</foto>
-      <pj>10</pj>
-      <pg>0</pg>
-      <pe>4</pe>
-      <pp>6</pp>
-      <gf>6</gf>
-      <gc>23</gc>
-      <dg>-17</dg>
-      <puntos>4</puntos>
-    </fila>
-  </clasificacion_actual>
+  <partidos>
+    <partido>
+      <local>SD Moraza</local>
+      <visitante>La Merced</visitante>
+      <goles_local>8</goles_local>
+      <goles_visitante>2</goles_visitante>
+      <iruzkinak>
+        <iruzkina erabiltzailea="erabiltzaile">Aupa moraza!!!!!!!!!!!!!!</iruzkina>
+      </iruzkinak>
+    </partido>
+    <partido>
+      <local>SD Ariz</local>
+      <visitante>Umore Ona</visitante>
+      <goles_local>1</goles_local>
+      <goles_visitante>2</goles_visitante>
+    </partido>
+    <partido>
+      <local>CD Baskonia</local>
+      <visitante>Santutxu FC</visitante>
+      <goles_local>0</goles_local>
+      <goles_visitante>0</goles_visitante>
+    </partido>
+  </partidos>
 </liga_global>
