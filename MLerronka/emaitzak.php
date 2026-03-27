@@ -81,5 +81,22 @@ $contenido_resultados = $procesador->transformToXML($xml);
       <?php echo $contenido_resultados; ?>
     </div>
   </main>
+  <footer>
+        <div class="footer-info">
+            <p>Lehendakari Aguirre, 97</p>
+            <p>646 78 98 78</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon-circle" aria-label="Facebook" target="_blank" rel="noopener">
+                <img src="irudiak/facebook.png" alt="Facebook" class="footer-icon">
+            </a>
+            <a href="#" class="icon-circle" aria-label="X" target="_blank" rel="noopener">
+                <img src="irudiak/gorjeo.png" alt="X" class="footer-icon">
+            </a>
+            <a href="#" class="icon-circle" aria-label="YouTube" target="_blank" rel="noopener">
+                <img src="irudiak/youtube.png" alt="YouTube" class="footer-icon">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

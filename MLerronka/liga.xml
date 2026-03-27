@@ -9,6 +9,22 @@
       <usuario>erabiltzaile</usuario>
       <contrasena>123abc</contrasena>
     </usuario>
+    <usuario rol="estandar">
+      <usuario>Iñigo</usuario>
+      <contrasena>123abc</contrasena>
+    </usuario>
+    <usuario rol="estandar">
+      <usuario>Supercell</usuario>
+      <contrasena>123abc</contrasena>
+    </usuario>
+    <usuario rol="estandar">
+      <usuario>Hector</usuario>
+      <contrasena>123abc</contrasena>
+    </usuario>
+    <usuario rol="estandar">
+      <usuario>MP</usuario>
+      <contrasena>123abc</contrasena>
+    </usuario>
     <usuario rol="arbitro">
       <usuario>referee</usuario>
       <contrasena>arbitroa123</contrasena>
@@ -261,6 +277,10 @@
       <origen escudo="../irudiak/ariz.png">SD Ariz</origen>
       <destino escudo="../irudiak/basconia.png">CD Baskonia</destino>
       <precio>0,01</precio>
+      <iruzkinak>
+        <iruzkina erabiltzailea="MP">Who is this guy?</iruzkina>
+        <iruzkina erabiltzailea="Hector">Ganas de conseguir logros en esta nueva etapa!!</iruzkina>
+      </iruzkinak>
     </fichaje>
     <fichaje>
       <jugador>Xabi Olarte</jugador>
@@ -290,12 +310,18 @@
       <visitante>Umore Ona</visitante>
       <goles_local>1</goles_local>
       <goles_visitante>2</goles_visitante>
+      <iruzkinak>
+        <iruzkina erabiltzailea="Iñigo">El portero del Umore ona es increible!</iruzkina>
+      </iruzkinak>
     </partido>
     <partido>
       <local>CD Baskonia</local>
       <visitante>Santutxu FC</visitante>
       <goles_local>0</goles_local>
       <goles_visitante>0</goles_visitante>
+      <iruzkinak>
+        <iruzkina erabiltzailea="Supercell">Vaya aburrimiento de partido...</iruzkina>
+      </iruzkinak>
     </partido>
   </partidos>
 </liga_global>
