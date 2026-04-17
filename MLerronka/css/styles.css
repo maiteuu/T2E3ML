@@ -233,6 +233,35 @@ tr:hover td { background-color: #f2f7f4 !important; }
 .foto-jugador { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #004a99; margin-bottom: 15px; }
 .posicion-tag { display: inline-block; background: #eef4fb; color: #004a99; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
 
+/* Imagen del jugador / equipo */
+.tarjeta-fichaje img {
+    width: 100%;
+    height: 200px;              /* Altura fija uniforme */
+    object-fit: contain;        /* NO recorta, se adapta bien */
+    background-color: #f8faf9;  /* Fondo suave si la imagen no llena */
+    border-radius: 12px;
+    padding: 10px;              /* Espacio interior tipo logo */
+    margin-bottom: 15px;
+}
+
+/* Si usas escudos pequeños dentro de texto */
+.escudo-fichaje {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+/* Contenedor de equipos (alineación bonita) */
+.equipos-fichaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    margin: 10px 0;
+}
 /* =========================================
    8. RESULTADOS Y KEXAK
 ========================================= */

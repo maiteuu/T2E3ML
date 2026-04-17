@@ -51,7 +51,7 @@ $procesador->setParameter('', 'usuario', $usuario_sesion);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitxaketak  - Euskal Futbol Federazioa</title>
     <link rel="icon" type="image/jpg" href="irudiak/balon.ico">
-    <link rel="stylesheet" href="css/styles.css?v=10" />
+    <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
     <header>
