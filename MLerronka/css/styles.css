@@ -1,0 +1,347 @@
+/* =========================================
+   1. VARIABLES Y RESET GENERAL
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+:root {
+    --eff-green: #00893d;
+    --eff-green-dark: #00662d;
+    --eff-red: #d11221;
+    --bg-body: #ffffff;
+    --bg-soft: #f8faf9;
+    --text-main: #374151;
+    --text-dark: #111827;
+    --border-light: #e5e7eb;
+    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 15px 30px rgba(0, 137, 61, 0.12);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--text-main); text-decoration: none; transition: var(--transition); }
+div { text-align: center; }
+
+img { max-width: 100%; height: auto; } /* Imagenes fluidas siempre */
+
+/* =========================================
+   2. TÍTULOS Y CABECERA (NAV)
+========================================= */
+.titulo-seccion, .titulo {
+    background-color: var(--eff-green);
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 4px solid var(--eff-red);
+    margin-bottom: 40px;
+}
+.titulo { padding: 22px; font-size: 24px; letter-spacing: 1.5px; }
+
+header {
+    display: flex; justify-content: center; align-items: center;
+    background-color: #ffffff; padding: 15px 50px; position: relative;
+    min-height: 90px; box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-bottom: 3px solid var(--eff-green);
+}
+header::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 4px; background-color: var(--eff-red);
+}
+header .logo { position: absolute; left: 50px; transition: var(--transition); }
+header .logo:hover { transform: scale(1.05); }
+header .logo img { width: 95px; height: auto; }
+
+nav ul { list-style: none; display: flex; gap: 40px; }
+nav ul li a {
+    font-size: 14px; font-weight: 800; color: var(--text-dark);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    padding: 8px 15px; border-radius: 6px; position: relative;
+}
+nav ul li a::after {
+    content: ''; position: absolute; width: 0; height: 3px;
+    bottom: 0; left: 50%; background-color: var(--eff-red);
+    transition: all 0.3s ease; transform: translateX(-50%);
+}
+nav ul li a:hover::after { width: 80%; }
+nav ul li a:hover { color: var(--eff-green); }
+
+/* Menú Desplegable */
+nav ul li.dropdown { position: relative !important; }
+nav ul li.dropdown .dropdown-menu {
+    display: none !important; position: absolute !important;
+    top: 100% !important; left: 0 !important;
+    background-color: #ffffff !important; min-width: 160px !important;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 4px !important; padding: 5px 0 !important;
+    margin: 0 !important; z-index: 9999 !important;
+    flex-direction: column !important; gap: 0 !important;
+}
+nav ul li.dropdown:hover .dropdown-menu { display: flex !important; }
+nav ul li.dropdown .dropdown-menu li { list-style: none !important; width: 100% !important; margin: 0 !important; }
+nav ul li.dropdown .dropdown-menu li a {
+    color: #374151 !important; padding: 8px 16px !important;
+    display: block !important; text-align: left !important; font-weight: 500 !important;
+}
+nav ul li.dropdown .dropdown-menu li a:hover { background-color: var(--bg-soft) !important; color: var(--eff-green) !important; }
+
+/* =========================================
+   3. ESTILOS COMUNES DE BOTONES
+========================================= */
+.btn-submit, .btn-guardar {
+    background-color: var(--eff-green); color: white; border: none;
+    padding: 12px; width: 100%; border-radius: 4px; font-size: 16px;
+    font-weight: bold; cursor: pointer; margin-top: 15px;
+}
+.btn-submit:hover, .btn-guardar:hover { background-color: var(--eff-green-dark); }
+
+.btn-cancel, .btn-cancelar {
+    display: block; text-align: center; margin-top: 15px;
+    color: #666; text-decoration: none;
+}
+.btn-cancel:hover, .btn-cancelar:hover { text-decoration: underline; }
+
+.btn-volver {
+    display: inline-block; margin: 35px auto; padding: 14px 35px;
+    background-color: var(--eff-green); color: #ffffff !important;
+    border-radius: 8px; font-weight: 800; text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 137, 61, 0.2);
+}
+.btn-volver:hover {
+    background-color: var(--eff-green-dark); transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 137, 61, 0.3);
+}
+
+.btn-filtro {
+    padding: 8px 15px; background-color: #fff; border: 2px solid #004a99;
+    color: #004a99; border-radius: 5px; font-weight: bold; transition: 0.3s;
+}
+.btn-filtro:hover { background-color: #004a99; color: white; }
+
+/* =========================================
+   4. FORMULARIOS (Login, Contacto, Admin)
+========================================= */
+form, .admin-form-container, .formulario-caja {
+    background: #fff; border-radius: 8px; box-shadow: var(--shadow-soft);
+    margin: 40px auto; padding: 30px; border: 1px solid #ccc; max-width: 100%;
+}
+form { max-width: 420px; border-top: 6px solid var(--eff-green); border-radius: 16px; }
+.admin-form-container { max-width: 400px; }
+.formulario-caja { max-width: 1000px; padding: 40px; border-radius: 12px; }
+
+form label, .form-group label, .form-label, .formulario-caja label {
+    display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-dark);
+}
+
+form input[type="text"], form input[type="password"],
+.form-group input, .form-group select,
+.formulario-caja input[type="text"], .formulario-caja input[type="email"],
+.formulario-caja select, .campo-texto-largo {
+    width: 100%; padding: 12px; border: 1px solid var(--border-light);
+    border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 15px;
+}
+.campo-texto-largo { min-height: 200px; resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--eff-green); }
+
+form input[type="submit"] {
+    background-color: var(--eff-green); color: white; border: none;
+    padding: 16px; width: 100%; border-radius: 8px; font-weight: 800;
+    text-transform: uppercase; cursor: pointer; transition: var(--transition);
+}
+form input[type="submit"]:hover { background-color: var(--eff-green-dark); transform: translateY(-2px); }
+
+.titulo-formulario {
+    color: var(--eff-green); font-size: 1.4rem; font-weight: 800;
+    margin: 30px 0 15px; border-bottom: 2px solid var(--eff-green);
+    display: inline-block; padding-bottom: 5px; text-transform: uppercase;
+}
+
+/* Alertas y Errores */
+.error, .itxi, .error-mensaje {
+    padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 20px;
+}
+.error { color: #d32f2f; background-color: #ffebee; border: 1px solid #ffcdd2; }
+.itxi { color: var(--eff-green); background: transparent; border: 2px solid var(--eff-green); }
+.error-mensaje { color: var(--eff-red); background: transparent; border: 2px solid var(--eff-red); }
+
+/* =========================================
+   5. PRESENTACIÓN E IMÁGENES (Index)
+========================================= */
+.presentacion { display: flex; align-items: center; gap: 50px; padding: 70px 40px; max-width: 1250px; margin: 0 auto; flex-wrap: wrap; }
+.presentacion .imagen, .presentacion .texto { flex: 1; min-width: 300px; }
+.presentacion .imagen img { width: 100%; border-radius: 16px; box-shadow: var(--shadow-hover); transition: var(--transition); }
+.presentacion .imagen img:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+.presentacion .texto h1 { font-size: 58px; font-weight: 800; color: var(--text-dark); line-height: 1.1; margin-bottom: 15px; text-transform: uppercase; }
+.presentacion .texto h2 { font-size: 16px; color: var(--eff-red); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; font-weight: 700; }
+
+.contenedor-imagenes { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+.item-imagen {
+    background: var(--bg-body); padding: 15px; border-radius: 16px;
+    box-shadow: var(--shadow-soft); text-align: center; flex: 1 1 300px;
+    max-width: 350px; transition: var(--transition); border: 2px solid transparent;
+}
+.item-imagen:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); border-color: var(--eff-green); }
+.item-imagen img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+
+/* =========================================
+   6. TABLAS (Sailkapena)
+========================================= */
+.contenedor-tabla {
+    max-width: 950px; margin: 60px auto; background-color: var(--bg-body);
+    border-radius: 16px; overflow-x: auto; /* IMPORTANTE: Permite scroll horizontal en móviles */
+    box-shadow: var(--shadow-hover); border: 1px solid var(--border-light);
+}
+table { width: 100%; border-collapse: collapse; min-width: 600px; } /* Evita que la tabla se aplaste en móvil */
+th { background-color: var(--bg-soft); padding: 18px 15px; font-weight: 800; font-size: 13px; text-transform: uppercase; border-bottom: 2px solid var(--border-light); }
+td { padding: 16px 15px; border-bottom: 1px solid var(--border-light); vertical-align: middle; font-weight: 600; }
+tbody tr:nth-child(even) td { background-color: #fcfdfc; }
+tr:hover td { background-color: #f2f7f4 !important; }
+.puntos { font-size: 18px; color: var(--eff-green); font-weight: 800; }
+
+.fila-champions td { background-color: rgba(30, 144, 255, 0.05) !important; }
+.fila-champions td:first-child { border-left: 5px solid #1e90ff; color: #1e90ff; font-weight: 800; }
+.fila-europa td { background-color: rgba(255, 140, 0, 0.05) !important; }
+.fila-europa td:first-child { border-left: 5px solid #ff8c00; color: #ff8c00; font-weight: 800; }
+.fila-descenso td { background-color: rgba(255, 68, 68, 0.05) !important; }
+.fila-descenso td:first-child { border-left: 5px solid #ff4444; color: #ff4444; font-weight: 800; }
+
+/* =========================================
+   7. EQUIPOS Y JUGADORES (Taldea & Fichajes)
+========================================= */
+.ficha-equipo { padding: 50px 20px; border-bottom: 1px solid var(--border-light); background: radial-gradient(circle at top, #ffffff, var(--bg-soft)); }
+.ficha-equipo img, .escudo-grande { width: 140px; margin-bottom: 25px; filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); transition: transform 0.5s; }
+.ficha-equipo img:hover { transform: scale(1.15); }
+.titulo-equipo-seccion, .titulo-equipo { font-size: 2.5rem; color: #004a99; text-transform: uppercase; font-weight: bold; margin: 20px 0; }
+
+.jugadores-grid, .contenedor-fichajes { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+.tarjeta-jugador, .tarjeta-fichaje { background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 20px; box-shadow: var(--shadow-soft); transition: var(--transition); }
+.tarjeta-jugador { width: 200px; text-align: center; }
+.tarjeta-fichaje { flex: 1 1 300px; border: 2px solid var(--border-light); }
+.tarjeta-fichaje:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--eff-green); }
+
+.foto-jugador { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #004a99; margin-bottom: 15px; }
+.posicion-tag { display: inline-block; background: #eef4fb; color: #004a99; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+/* Imagen del jugador / equipo */
+.tarjeta-fichaje img {
+    width: 100%;
+    height: 200px;              /* Altura fija uniforme */
+    object-fit: contain;        /* NO recorta, se adapta bien */
+    background-color: #f8faf9;  /* Fondo suave si la imagen no llena */
+    border-radius: 12px;
+    padding: 10px;              /* Espacio interior tipo logo */
+    margin-bottom: 15px;
+}
+
+/* Si usas escudos pequeños dentro de texto */
+.escudo-fichaje {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+/* Contenedor de equipos (alineación bonita) */
+.equipos-fichaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/* =========================================
+   8. RESULTADOS Y KEXAK
+========================================= */
+.contenedor-principal-resultados { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+.marcador-fila, .kexa-tarjeta { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; padding: 15px 20px; margin-bottom: 15px; box-shadow: var(--shadow-soft); transition: transform 0.2s; }
+.marcador-fila { display: flex; align-items: center; justify-content: space-between; }
+.marcador-fila:hover { transform: scale(1.02); border-color: var(--eff-green); }
+.equipo { flex: 1; display: flex; align-items: center; font-size: 1.2rem; font-weight: bold; }
+.equipo.local { justify-content: flex-end; }
+.equipo.visitante { justify-content: flex-start; }
+.escudo-resultado { width: 40px; height: 40px; object-fit: contain; margin: 0 15px; }
+.resultado-caja { background: var(--eff-red); color: white; padding: 10px 25px; border-radius: 5px; font-size: 1.6rem; font-weight: bold; }
+
+.kexa-header { font-size: 1.2rem; font-weight: bold; margin-bottom: 5px; }
+.kexa-meta { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
+.kexa-body { color: #444; line-height: 1.6; font-style: italic; }
+
+/* =========================================
+   9. SISTEMA DE COMENTARIOS
+========================================= */
+.seccion-comentarios { margin-top: 10px; padding-top: 8px; border-top: 1px solid #f2f2f2; }
+.comentario-item { font-size: 0.85rem; margin-bottom: 4px; line-height: 1.2; word-wrap: break-word; }
+.comentario-autor { font-weight: 800; font-size: 0.75rem; color: #000; margin-right: 5px; }
+.form-comentario { display: flex; flex-wrap: wrap; margin-top: 8px; gap: 12px; align-items: center; max-width: 550px; }
+.input-comentario { flex: 1; min-width: 150px; border: none; border-bottom: 1px solid #ccc; padding: 4px 0; font-size: 16px; height: 28px; background: transparent; outline: none; transition: 0.3s; }
+.input-comentario:focus { border-color: var(--eff-green); }
+.btn-comentario { background: none; color: var(--eff-green); border: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: 0.2s; }
+.btn-comentario:hover { opacity: 0.7; text-decoration: underline; }
+
+/* =========================================
+   10. ESTADO DE USUARIO (BADGES Y LOGOUT)
+========================================= */
+.user-rol-badge { background-color: var(--bg-soft); color: var(--eff-green); font-size: 13px; font-weight: 800; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--eff-green); }
+.btn-logout { color: var(--eff-red) !important; }
+.btn-logout::after { background-color: var(--eff-red) !important; }
+
+/* =========================================
+   11. FOOTER Y CONTACTO (Mapas)
+========================================= */
+footer { background-color: var(--text-dark); color: #fff; padding: 40px 50px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 70px; border-top: 4px solid var(--eff-red); }
+.social-icons { display: flex; gap: 20px; }
+.footer-icon { width: 38px; height: 38px; transition: var(--transition); filter: brightness(0) invert(1); }
+.footer-icon:hover { transform: scale(1.15) translateY(-3px); filter: brightness(0) invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.5)); }
+
+.contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
+.map-column { flex: 1 1 300px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-soft); min-height: 400px; }
+.map-column iframe { width: 100%; height: 100%; border: none; display: block; }
+.info-column { flex: 1 1 300px; background-color: var(--bg-body); padding: 45px; border-radius: 12px; box-shadow: var(--shadow-soft); border-top: 6px solid var(--eff-green); }
+
+
+/* =========================================
+   12. REGLAS RESPONSIVE (MEDIA QUERIES)
+========================================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 990px) {
+    header { flex-direction: column; padding: 20px; gap: 15px; }
+    header .logo { position: static; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+
+    .presentacion { padding: 40px 20px; text-align: center; }
+    .presentacion .texto { padding-left: 0; }
+    .presentacion .texto h1 { font-size: 40px; }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+    .titulo-seccion, .titulo { font-size: 20px; padding: 15px; }
+    
+    /* El marcador de resultados se apila para que quepan los nombres */
+    .marcador-fila { flex-direction: column; gap: 15px; text-align: center; }
+    .equipo { justify-content: center !important; flex-direction: column-reverse; gap: 10px; }
+    .equipo .escudo-resultado { margin: 0; }
+    
+    /* Footer centrado */
+    footer { flex-direction: column; text-align: center; gap: 20px; padding: 30px 20px; }
+    
+    /* Botón de comentarios a la derecha cuando se hace salto de línea */
+    .btn-comentario { width: 100%; justify-content: flex-end; margin-top: 5px; }
+
+    /* Los formularios aprovechan todo el ancho de la pantalla */
+    form, .admin-form-container, .formulario-caja { padding: 20px; width: 95%; }
+}
